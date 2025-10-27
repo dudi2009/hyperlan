@@ -1,0 +1,74 @@
+{
+  // Konfigurasi utama bar
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "spacing": 4,
+  
+  // Modul yang akan ditampilkan
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["cpu", "memory", "battery", "pulseaudio", "tray"],
+  
+  // Konfigurasi modul Hyprland workspaces [citation:1][citation:6]
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",
+      "2": "", 
+      "3": "",
+      "4": "",
+      "5": "",
+      "active": "",
+      "default": ""
+    },
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "on-click": "activate"
+  },
+  
+  // Konfigurasi modul window title [citation:1]
+  "hyprland/window": {
+    "max-length": 50,
+    "separate-outputs": true
+  },
+  
+  // Konfigurasi clock
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%A, %d %B %Y}"
+  },
+  
+  // Konfigurasi CPU
+  "cpu": {
+    "format": "CPU: {usage}%",
+    "interval": 5
+  },
+  
+  // Konfigurasi memory
+  "memory": {
+    "format": "RAM: {percentage}%",
+    "interval": 5
+  },
+  
+  // Konfigurasi audio
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": ["", "", ""],
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "scroll-step": 5
+  },
+  
+  // Konfigurasi battery
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "format-charging": " {capacity}%"
+  },
+  
+  // System tray
+  "tray": {
+    "spacing": 10
+  }
+}
