@@ -8,13 +8,13 @@
   // Modul yang akan ditampilkan
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock"],
-  "modules-right": ["cpu", "memory", "battery", "pulseaudio", "tray"],
+  "modules-right": ["cpu", "memory", "battery", "pulseaudio", "custom/power", "tray"],
   
   // Konfigurasi modul Hyprland workspaces [citation:1][citation:6]
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "1": "",
+      "1": "",
       "2": "", 
       "3": "",
       "4": "",
@@ -35,19 +35,19 @@
   
   // Konfigurasi clock
   "clock": {
-    "format": "{:%H:%M}",
+    "format": "{:%H:%M %p}",
     "format-alt": "{:%A, %d %B %Y}"
   },
   
   // Konfigurasi CPU
   "cpu": {
-    "format": "CPU: {usage}%",
+    "format": " {usage}%",
     "interval": 5
   },
   
   // Konfigurasi memory
   "memory": {
-    "format": "RAM: {percentage}%",
+    "format": " {percentage}%",
     "interval": 5
   },
   
@@ -70,5 +70,16 @@
   // System tray
   "tray": {
     "spacing": 10
-  }
+  },
+"custom/power": {
+	"format": "⏻",
+        "format-alt": "Power",
+        "on-click": "~/.config/waybar/scripts/power-menu.sh",
+        "on-click-right": "~/.config/waybar/scripts/power-menu.sh",
+        "tooltip": false
 }
+  
+  
+}
+
+  
