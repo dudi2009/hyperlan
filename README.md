@@ -79,9 +79,8 @@ Tambahkan warna, font, atau tema Anda sendiri.
 Kreativitas tidak ada batasnya! 💡
 
 🖼️ Screenshot 
-<p align="center">
-  <img src="Screenshot-2025-10-31_14:47:46.png" alt="Hyperlan preview" />
-</p>
+![Hyperlan preview](./Screenshot-2025-10-31_14:47:46.png)
+
 
 
 🧑‍💻 Kontribusi
